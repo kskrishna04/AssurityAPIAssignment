@@ -90,7 +90,7 @@ public class APIValidation {
 						ValidationOutput.put("Promotions Validation", "Failed because, API response contains Promotions of unexpected type");
 					}
 				}
-				apiResponseReader.close();
+				apiResponseReader.close(); 
 			}
 			else
 			{

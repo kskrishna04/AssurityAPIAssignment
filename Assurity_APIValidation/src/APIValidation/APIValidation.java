@@ -90,17 +90,20 @@ public class APIValidation {
 						ValidationOutput.put("Promotions Validation", "Failed because, API response contains Promotions of unexpected type");
 					}
 				}
+				apiResponseReader.close();
 			}
 			else
 			{
 				ValidationOutput.put("{ERROR}:","Connection cannot be established");
 			}
+			apiConnection.disconnect();
 			
 		}
 		catch(Exception ex)
 		{
 			ValidationOutput.put("Exception:", ex.fillInStackTrace());
 		}
+		
 	}
 
 }
